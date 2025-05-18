@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Image, StyleSheet, View} from 'react-native'
+import {Image, StyleSheet, Text, View} from 'react-native'
 
 export default class App extends Component {
     render() {
@@ -10,7 +10,24 @@ export default class App extends Component {
                         <Image style={styles.cardImage}
                                 source={require('../../assets/images/user.png')}/>
                     </View>
-                </View>    
+                    <View>
+                        <Text style={styles.cardName}>
+                            John Doe
+                        </Text>
+                    </View>
+                    <View style={styles.cardOccupationContainer}>
+                        <Text styles={styles.cardOccupation}>
+                            React Native Developer
+                        </Text>
+                    </View>
+                    <View>
+                        <Text style={styles.cardDescription}>
+                            John is a really great JavaScript developer. He loves
+                            using JS to build Nativ React applications for IOS
+                            and Android.
+                        </Text>
+                    </View>
+                </View> 
             </View>
         );
     }
@@ -48,5 +65,32 @@ const styles = StyleSheet.create({
     cardImage: {
         width: 80,
         height: 80
+    },
+    cardName: {
+        color: 'white',
+        marginTop: 30,
+        fontWeight: 'bold',
+        fontSize: 24,
+        textShadowColor: 'black',
+        textShadowOffset: {
+            height: 2,
+            width: 2
+        }
+    },
+    cardOccupationContainer: {
+        borderColor: 'black',
+        borderBottomWidth: 3,
+    },
+    cardOccupation: {
+        marginTop: 10,
+        marginBottom: 10,
+        fontWeight: 'bold'
+    },
+    cardDescription: {
+        marginTop: 10,
+        marginRight: 40,
+        marginLeft: 40,
+        marginBottom: 10,
+        fontStyle: 'italic'
     }
 });
