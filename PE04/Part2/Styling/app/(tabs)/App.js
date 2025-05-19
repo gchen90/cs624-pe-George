@@ -11,6 +11,41 @@ const data = [{
     occupation: 'React Native Developer',
     description: 'John is a really great Javascript developer. ' + 'He loves using JS to build React Native applications ' + 'for iOS and Android',
     showThumbnail: true
+  },
+  {
+    image: userImage,
+    name: 'John Doe',
+    occupation: 'React Native Developer',
+    description: 'John is a really great Javascript developer. ' + 'He loves using JS to build React Native applications ' + 'for iOS and Android',
+    showThumbnail: true
+  },
+  {
+    image: userImage,
+    name: 'John Doe',
+    occupation: 'React Native Developer',
+    description: 'John is a really great Javascript developer. ' + 'He loves using JS to build React Native applications ' + 'for iOS and Android',
+    showThumbnail: true
+  },
+  {
+    image: userImage,
+    name: 'John Doe',
+    occupation: 'React Native Developer',
+    description: 'John is a really great Javascript developer. ' + 'He loves using JS to build React Native applications ' + 'for iOS and Android',
+    showThumbnail: true
+  },
+  {
+    image: userImage,
+    name: 'John Doe',
+    occupation: 'React Native Developer',
+    description: 'John is a really great Javascript developer. ' + 'He loves using JS to build React Native applications ' + 'for iOS and Android',
+    showThumbnail: true
+  },
+  {
+    image: userImage,
+    name: 'John Doe',
+    occupation: 'React Native Developer',
+    description: 'John is a really great Javascript developer. ' + 'He loves using JS to build React Native applications ' + 'for iOS and Android',
+    showThumbnail: true
   }
 ];
 
@@ -23,7 +58,7 @@ const ProfileCard = (props) => {
   }
 
   return (
-    <TouchableHighlight onPress={onPress}> 
+    <TouchableHighlight style={styles.touchableContainer} onPress={onPress}> 
       <View style={[containerStyles]}>
         <View style={styles.cardImageContainer}>
           <Image style={styles.cardImage} source={image}/>
@@ -97,8 +132,16 @@ const profileCardColor = 'dodgerblue';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'flex-start',
+        backgroundColor: 'lightgray'
+    },
+    touchableContainer: {
+        width: '40%',
+        height: '30%',
+        justifyContent: 'center'
     },
     cardContainer: {
         alignItems: 'center',
